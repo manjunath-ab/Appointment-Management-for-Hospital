@@ -11,6 +11,16 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class EncounterHistory {
+    
+        private String patientID;
+
+        public void setPatientID(String patientID) {
+           this.patientID = patientID;
+        }
+
+        public String getPatientID() {
+           return patientID;
+        }
         private ArrayList<Encounter> encounterHistory;
 
         public EncounterHistory(ArrayList<Encounter> encounterHistory) {

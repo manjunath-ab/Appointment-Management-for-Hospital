@@ -4,10 +4,13 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Community;
 import model.Doctor;
+import model.Hospital;
 import model.Patient;
+import static ui.MainJFrame.splitPane;
 
 /**
  *
@@ -101,6 +104,17 @@ public class SelectPatientJPanel extends javax.swing.JPanel {
 
     private void btnDiagnoseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagnoseActionPerformed
         // TODO add your handling code here:
+        int selectedRowIndex = jTable1.getSelectedRow();
+        
+        if (selectedRowIndex<0){
+            JOptionPane.showMessageDialog(this,"Please select a Hospital");
+            return;
+        }
+        DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
+        //getting the whole object to manipulate
+        Patient selectedPatient= (Patient) model.getValueAt(selectedRowIndex,0);
+        DiagnoseJPanel diagnosePanel=new DiagnoseJPanel(selectedPatient);
+        splitPane.setRightComponent(diagnosePanel);
     }//GEN-LAST:event_btnDiagnoseActionPerformed
 
 

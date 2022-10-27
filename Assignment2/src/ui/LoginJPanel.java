@@ -47,6 +47,8 @@ public class LoginJPanel extends javax.swing.JPanel {
         lblUserName = new javax.swing.JLabel();
         lblPass = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,62 +108,13 @@ public class LoginJPanel extends javax.swing.JPanel {
            MainJFrame.splitPane.setRightComponent(sysPanel);
         
     }
+        else{
+                    JOptionPane.showMessageDialog(this,"Invalid User");
+                    return;
+                }
         //check for Patient and then Doctor
         
-        for(UserLogin e :userLoginList.getUserLoginList()){
-            
-            if(txtUserName.getText().equals(e.getUserName())&&txtPass.getText().equals(e.getPass())){
-                if(e.getUserType().equals("Patient")){
-                    PatientJPanel  patientPanel= new PatientJPanel();
-                    //SearchJPanel searchPanel = new SearchJPanel(commList);
-                    splitPane.setRightComponent(patientPanel);
-                   
-                }
-                else if(e.getUserType().equals("Doctor")){
-                    for(Doctor d:doctorDirectory.getDoctorDirectory()){
-                        
-                        if(d.getDocID().equals(e.getUid())){
-                            
-                            System.out.print(d.getDocID());
-                            SelectPatientJPanel patientPanel= new SelectPatientJPanel(d);//need to access that particular doctor list here
-                            splitPane.setRightComponent(patientPanel);
-                            
-                        }
-                        
-                        
-                    }
-                    
-                }
-                else if(e.getUserType().equals("Community Admin")){
-                    //give access to crud in his/her community
-                    for(Community c: commList.getCommList()){
-                        if(c.getCommunityName().equals(e.getUserName())){
-                            CommunityAdminJPanel communityPanel=new CommunityAdminJPanel(c);//access to list of hospitals 
-                            splitPane.setRightComponent(communityPanel);
-                            
-                        }
-                    }
-                    
-                }
-                else if(e.getUserType().equals("Hospital Admin")){
-                    for(Community c: commList.getCommList()){
-                        for(Hospital h:c.getHospitalDirectory()){
-                            if(h.getHospitalName().equals(e.getUserName())){
-                            HospitalAdminJPanel hospitalPanel=new HospitalAdminJPanel(h);//access to list of hospitals 
-                            splitPane.setRightComponent(hospitalPanel);
-                            break;
-                            
-                        }
-                    }
-                    
-                }
-                }
-                else{
-                    JOptionPane.showMessageDialog(this,"User Type does not exist");
-                }
-            }
-            
-        }
+        
         
         
         

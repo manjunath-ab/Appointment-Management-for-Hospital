@@ -13,6 +13,15 @@ public class Doctor {
     
     private String doctorName;
     private String docID;
+    private String special;
+
+    public void setSpecial(String special) {
+        this.special = special;
+    }
+
+    public String getSpecial() {
+        return special;
+    }
     private ArrayList<Patient> patientList;
     //define an array of patient_id or names;
 

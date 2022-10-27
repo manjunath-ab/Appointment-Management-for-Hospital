@@ -99,18 +99,14 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanelLayout.setHorizontalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addGroup(controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnPatient, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnDoctor, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnCommAdmin, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnSysAdmin, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlPanelLayout.createSequentialGroup()
-                        .addComponent(btnHosAdmin)
-                        .addGap(28, 28, 28))))
+                    .addComponent(btnPatient, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnDoctor, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnCommAdmin, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSysAdmin, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnHosAdmin, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
 
         controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDoctor, btnPatient});
@@ -182,7 +178,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatientActionPerformed
         // TODO add your handling code here:
-        LoginJPanel loginPanel=new LoginJPanel();
+        PatientLoginJPanel loginPanel=new PatientLoginJPanel();
         
         splitPane.setRightComponent(loginPanel);
     }//GEN-LAST:event_btnPatientActionPerformed
@@ -193,14 +189,14 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPane.setRightComponent(viewPanel);*/
         //SearchJPanel searchPanel = new SearchJPanel(history);
         //splitPane.setRightComponent(searchPanel);
-        LoginJPanel loginPanel=new LoginJPanel();
+        DoctorLoginJPanel loginPanel=new DoctorLoginJPanel();
         
         splitPane.setRightComponent(loginPanel);
     }//GEN-LAST:event_btnDoctorActionPerformed
 
     private void btnCommAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCommAdminActionPerformed
         // TODO add your handling code here:
-        LoginJPanel loginPanel=new LoginJPanel();
+        CommLoginJPanel loginPanel=new CommLoginJPanel();
         
         splitPane.setRightComponent(loginPanel);
     }//GEN-LAST:event_btnCommAdminActionPerformed
@@ -214,7 +210,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnHosAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHosAdminActionPerformed
         // TODO add your handling code here:
-        LoginJPanel loginPanel = new LoginJPanel();
+        HospitalLoginJPanel loginPanel = new HospitalLoginJPanel();
         splitPane.setRightComponent(loginPanel);
     }//GEN-LAST:event_btnHosAdminActionPerformed
 

@@ -13,10 +13,22 @@ import java.util.ArrayList;
 public class Patient extends Person{
     String address;
     
+    private ArrayList<Encounter> encounterHistory;
 
+    public ArrayList<Encounter> getEncounterHistory() {
+        return encounterHistory;
+    }
+
+    public void setEncounterHistory(ArrayList<Encounter> encounterHistory) {
+        this.encounterHistory = encounterHistory;
+    }
+
+    
+    
     public Patient(String Name, String patientID, int age, String gender,long Cell_phone_number,String emailAddress ) {
         super(Name, patientID, age, gender,Cell_phone_number,emailAddress);
         this.address = address;
+        this.encounterHistory = new ArrayList<>();
         
     }
 

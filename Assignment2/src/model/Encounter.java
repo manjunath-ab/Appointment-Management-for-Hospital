@@ -8,28 +8,18 @@ package model;
  *
  * @author Admin
  */
-public class Encounter {
+public class Encounter extends VitalSigns{
     
-    String doctorName;
-    String patientName;
-    
+   //put vital signs class attributes
+    private int encounterNumber;
 
-    public String getDoctorName() {
-        return doctorName;
+    public int getEncounterNumber() {
+        return encounterNumber;
     }
 
-    public String getPatientName() {
-        return patientName;
+    public void setEncounterNumber(int encounterNumber) {
+        this.encounterNumber = encounterNumber;
     }
-
-    public void setDoctorName(String doctorName) {
-        this.doctorName = doctorName;
-    }
-
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
-    }
-    
     
     
 }

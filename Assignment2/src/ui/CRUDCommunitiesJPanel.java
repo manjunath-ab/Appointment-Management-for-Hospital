@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import model.Community;
 import model.Doctor;
 import static ui.MainJFrame.commList;
-import static ui.PatientJPanel.cb1;
+
 
 /**
  *
@@ -165,8 +165,6 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
         Community newCommunity=new Community();
         newCommunity.setCommunityName(txtAddComm.getText());
         commList.getCommList().add(newCommunity);
-        
-        
        // cb1.getEditor().
         populateTable();
     }//GEN-LAST:event_btnAddActionPerformed

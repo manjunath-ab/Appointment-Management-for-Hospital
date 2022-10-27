@@ -37,6 +37,7 @@ public class SelectDoctorJPanel extends javax.swing.JPanel {
             Object[] row = new Object[100];//2 members for now
             //row[0]=e.getName();
             row[0]=e;//1st column stores object names so..they get deleted
+            row[1]=e.getSpecial();
             
             
             model.addRow(row);
@@ -61,13 +62,13 @@ public class SelectDoctorJPanel extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Doctors"
+                "Doctor Name", "Specialization"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

@@ -10,4 +10,7 @@ package model;
  */
 public class House {
     
+    private int houseNum;
+    private String communityName;
+    
 }
