@@ -6,25 +6,30 @@
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/Hospital.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SelectPatientJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/City.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/Doctor.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SelectDoctorJPanel.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/House.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/Community.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/DiagnoseJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/HospitalDirectory.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/CommunityAdminJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/CRUDCommunitiesJPanel.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/CRUDPatientJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/Patient.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SysAdminJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/EncounterHistory.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/EncounterJPanel.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/MainJFrame.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/Encounter.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/LoginJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/VitalSigns.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/HospitalLoginJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/CommLoginJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/House.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/DoctorLoginJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/PatientLoginJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/DiagnoseJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/model/PatientDirectory.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/CommunityAdminJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SysAdminJPanel.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/MainJFrame.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/HospitalAdminJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SearchJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/PatientJPanel.java</file>
             <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/SearchHospitalJPanel.java</file>
-            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/Assignment2/src/ui/LoginJPanel.java</file>
         </group>
     </open-files>
 </project-private>

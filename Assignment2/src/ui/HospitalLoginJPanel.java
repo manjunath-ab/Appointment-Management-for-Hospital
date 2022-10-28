@@ -42,8 +42,9 @@ public class HospitalLoginJPanel extends javax.swing.JPanel {
         txtPass = new javax.swing.JTextField();
         lblUserName = new javax.swing.JLabel();
         lblPass = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 153, 51));
+        setBackground(new java.awt.Color(102, 0, 102));
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -58,30 +59,44 @@ public class HospitalLoginJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblUserName.setForeground(new java.awt.Color(255, 255, 255));
         lblUserName.setText("UserName");
 
+        lblPass.setForeground(new java.awt.Color(255, 255, 255));
         lblPass.setText("Password");
+
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Hospital Admin Login");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(198, 198, 198)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblUserName)
-                    .addComponent(lblPass))
-                .addGap(85, 85, 85)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1)
-                    .addComponent(txtUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
-                    .addComponent(txtPass))
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(198, 198, 198)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblUserName)
+                            .addComponent(lblPass))
+                        .addGap(85, 85, 85)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton1)
+                            .addComponent(txtUserName, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                            .addComponent(txtPass)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(107, 107, 107)
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblUserName))
@@ -138,6 +153,7 @@ public class HospitalLoginJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblUserName;
     private javax.swing.JTextField txtPass;

@@ -61,6 +61,10 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         txtUpdateComm = new javax.swing.JTextField();
         btnSelect = new javax.swing.JButton();
+        btnLog = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(102, 0, 102));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,7 +86,8 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("Community");
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Community Name");
 
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -105,34 +110,46 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setText("Logout");
+        btnLog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Community Name");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(105, 105, 105)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(148, 148, 148)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel1)
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnDelete)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(txtAddComm, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(130, 130, 130)
-                                .addComponent(txtUpdateComm)
-                                .addGap(32, 32, 32)
-                                .addComponent(btnUpdate)))
-                        .addGap(27, 27, 27)
-                        .addComponent(btnAdd)))
-                .addGap(37, 37, 37)
-                .addComponent(btnSelect)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtUpdateComm, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                                        .addComponent(txtAddComm)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnUpdate, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnAdd, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(64, 64, 64)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSelect)
+                    .addComponent(btnLog))
                 .addGap(108, 108, 108))
         );
         layout.setVerticalGroup(
@@ -144,19 +161,22 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(btnSelect)))
+                        .addComponent(btnSelect)
+                        .addGap(37, 37, 37)
+                        .addComponent(btnLog)))
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
                     .addComponent(jLabel1)
                     .addComponent(txtAddComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(btnDelete)
-                .addGap(35, 35, 35)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(txtUpdateComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(91, Short.MAX_VALUE))
+                    .addComponent(jLabel2)
+                    .addComponent(txtUpdateComm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpdate))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addComponent(btnDelete)
+                .addGap(60, 60, 60))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -216,13 +236,21 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSelectActionPerformed
 
+    private void btnLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogActionPerformed
+        // TODO add your handling code here:
+
+        MainJFrame.splitPane.setRightComponent(MainJFrame.workPanel);
+    }//GEN-LAST:event_btnLogActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnLog;
     private javax.swing.JButton btnSelect;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtAddComm;

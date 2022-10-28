@@ -52,12 +52,13 @@ public class MainJFrame extends javax.swing.JFrame {
         btnSysAdmin = new javax.swing.JButton();
         btnHosAdmin = new javax.swing.JButton();
         workPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        controlPanel.setBackground(new java.awt.Color(204, 204, 255));
+        controlPanel.setBackground(new java.awt.Color(255, 102, 102));
 
         btnPatient.setText("Patient Login");
         btnPatient.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +110,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDoctor, btnPatient});
+        controlPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCommAdmin, btnDoctor, btnHosAdmin, btnPatient, btnSysAdmin});
 
         controlPanelLayout.setVerticalGroup(
             controlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,38 +125,51 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnSysAdmin)
                 .addGap(35, 35, 35)
                 .addComponent(btnHosAdmin)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
 
-        workPanel.setBackground(new java.awt.Color(153, 153, 153));
+        workPanel.setBackground(new java.awt.Color(102, 0, 102));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
-        jLabel1.setText("Click on \"View\" to make update ,delete or just view a profile");
+        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Assignment 2");
 
-        jLabel2.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
-        jLabel2.setText("Click on \"Create\" to make a New Employee Profile");
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Welcome to my application,");
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Please select an option on the left panel accordingly to access our services");
 
         javax.swing.GroupLayout workPanelLayout = new javax.swing.GroupLayout(workPanel);
         workPanel.setLayout(workPanelLayout);
         workPanelLayout.setHorizontalGroup(
             workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanelLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
                 .addGroup(workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addContainerGap(250, Short.MAX_VALUE))
+                    .addGroup(workPanelLayout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addComponent(jLabel3))
+                    .addGroup(workPanelLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4))))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         workPanelLayout.setVerticalGroup(
             workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanelLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
+                .addGap(68, 68, 68)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(233, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         splitPane.setRightComponent(workPanel);
@@ -329,9 +343,10 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnPatient;
     private javax.swing.JButton btnSysAdmin;
     private javax.swing.JPanel controlPanel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     public static javax.swing.JSplitPane splitPane;
-    private javax.swing.JPanel workPanel;
+    public static javax.swing.JPanel workPanel;
     // End of variables declaration//GEN-END:variables
 }

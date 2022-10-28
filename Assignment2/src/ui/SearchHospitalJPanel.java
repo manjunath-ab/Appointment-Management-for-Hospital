@@ -59,6 +59,9 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         btnSelect = new javax.swing.JButton();
+        btnLog = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(102, 0, 102));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,6 +83,13 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setText("Logout");
+        btnLog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,20 +98,25 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(83, 83, 83)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                        .addComponent(btnLog))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(267, 267, 267)
-                        .addComponent(btnSelect)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                        .addGap(269, 269, 269)
+                        .addComponent(btnSelect)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLog))
+                .addGap(43, 43, 43)
                 .addComponent(btnSelect)
-                .addGap(68, 68, 68))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -131,8 +146,16 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
         //get community name and display list of hospitals in the next panel
     }//GEN-LAST:event_btnSelectActionPerformed
 
+    private void btnLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogActionPerformed
+        // TODO add your handling code here:
+
+        MainJFrame.splitPane.setRightComponent(MainJFrame.workPanel);
+
+    }//GEN-LAST:event_btnLogActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLog;
     private javax.swing.JButton btnSelect;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

@@ -63,6 +63,12 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
         txtUpdateName = new javax.swing.JTextField();
         btnUpdate = new javax.swing.JButton();
         btnSelect = new javax.swing.JButton();
+        btnLog = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(102, 0, 102));
+        setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,19 +117,37 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setText("Logout");
+        btnLog.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Hospital Name");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Hospital Name");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(btnSelect))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnSelect)
+                            .addComponent(btnLog)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(174, 174, 174)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(48, 48, 48)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtAddHospital, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                             .addComponent(txtUpdateName))
@@ -132,7 +156,7 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
                             .addComponent(btnUpdate)
                             .addComponent(btnDelete)
                             .addComponent(btnAdd))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,19 +166,23 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
+                        .addGap(23, 23, 23)
+                        .addComponent(btnLog)
+                        .addGap(18, 18, 18)
                         .addComponent(btnSelect)))
-                .addGap(97, 97, 97)
-                .addComponent(btnDelete)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAddHospital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAdd))
+                    .addComponent(btnAdd)
+                    .addComponent(jLabel1))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUpdateName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpdate))
-                .addGap(86, 86, 86))
+                    .addComponent(btnUpdate)
+                    .addComponent(jLabel2))
+                .addGap(36, 36, 36)
+                .addComponent(btnDelete)
+                .addGap(27, 27, 27))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -243,12 +271,21 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
         MainJFrame.splitPane.setRightComponent(crudDoc);
     }//GEN-LAST:event_btnSelectActionPerformed
 
+    private void btnLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogActionPerformed
+        // TODO add your handling code here:
+
+        MainJFrame.splitPane.setRightComponent(MainJFrame.workPanel);
+    }//GEN-LAST:event_btnLogActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnLog;
     private javax.swing.JButton btnSelect;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtAddHospital;
