@@ -25,7 +25,7 @@ public class Doctor {
     private ArrayList<Patient> patientList;
     //define an array of patient_id or names;
 
-    public Doctor(String doctorName, String docID) {
+    public Doctor(String doctorName, String docID,String special) {
         this.doctorName = doctorName;
         this.docID = docID;
         this.patientList=new ArrayList<>();

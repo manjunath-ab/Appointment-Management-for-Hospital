@@ -11,7 +11,24 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Patient extends Person{
-    String address;
+    private String communityName;
+    int houseNumber;
+
+    public String getCommunityName() {
+        return communityName;
+    }
+
+    public void setCommunityName(String communityName) {
+        this.communityName = communityName;
+    }
+
+    public int getHouseNumber() {
+        return houseNumber;
+    }
+
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
+    }
     
     private ArrayList<Encounter> encounterHistory;
 
@@ -27,28 +44,18 @@ public class Patient extends Person{
     
     public Patient(String Name, String patientID, int age, String gender,long Cell_phone_number,String emailAddress ) {
         super(Name, patientID, age, gender,Cell_phone_number,emailAddress);
-        this.address = address;
+        
         this.encounterHistory = new ArrayList<>();
         
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    
-    
-    
         
-    
-    //define vital signs class
-    //house class
-
-    public String getAddress() {
-        return address;
     }
+
+    
+    
+    
     @Override
     public String toString(){
-        return patientID;
+        return Name;
     }
     
    

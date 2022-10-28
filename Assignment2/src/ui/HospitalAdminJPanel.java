@@ -40,6 +40,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
             Object[] row = new Object[100];//2 members for now
             //row[0]=e.getName();
             row[0]=d;//1st column stores object names so..they get deleted
+            row[1]=d.getSpecial();
             
             
             model.addRow(row);
@@ -68,7 +69,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cb1 = new javax.swing.JComboBox<>();
         btnSelect = new javax.swing.JButton();
         btnLog = new javax.swing.JButton();
 
@@ -132,7 +133,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Specialization");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Dermatalogy", "Neurology", "Urology" }));
+        cb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Dermatalogy", "Neurology", "Urology" }));
 
         btnSelect.setText("Select Further");
         btnSelect.addActionListener(new java.awt.event.ActionListener() {
@@ -181,7 +182,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
                                 .addGap(61, 61, 61)
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnAdd)))))
                 .addGap(207, 207, 207))
@@ -206,7 +207,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdd))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,7 +274,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         //add to dd
-        doctorDirectory.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText()));
+        doctorDirectory.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
         //add cred to user login list
         UserLogin newDoctor=new UserLogin();
         newDoctor.setUserName(txtUserName.getText());
@@ -285,7 +286,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         txtPass.getPassword();
         txtUid.getText();
         //add to table
-        h.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText()));
+        h.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
         populateTable();
         
     }//GEN-LAST:event_btnAddActionPerformed
@@ -351,7 +352,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnLog;
     private javax.swing.JButton btnSelect;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> cb1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

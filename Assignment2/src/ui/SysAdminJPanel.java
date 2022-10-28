@@ -197,10 +197,7 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             patientDirectory.getPatientDirectory().add(new Patient(newUser.getUserName(),newUser.getUid(),1,"",1,""));
             
         }
-        else if (newUser.getUserType().equals("Doctor")){
-            doctorDirectory.getDoctorDirectory().add(new Doctor(newUser.getUserName(),newUser.getUid()));
-            
-        }
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addjPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjPasswordFieldActionPerformed
