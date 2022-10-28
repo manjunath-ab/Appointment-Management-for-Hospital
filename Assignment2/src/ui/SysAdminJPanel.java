@@ -79,7 +79,7 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        cbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Doctor", "Community Admin", "Hospital Admin" }));
+        cbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Community Admin", "Hospital Admin" }));
 
         btnCrud.setText("Access");
         btnCrud.addActionListener(new java.awt.event.ActionListener() {

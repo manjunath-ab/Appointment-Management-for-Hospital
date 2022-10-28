@@ -34,10 +34,11 @@ public class SelectDoctorJPanel extends javax.swing.JPanel {
         
         for (Doctor e : hospital.getDoctorDirectory()){
             
-            Object[] row = new Object[100];//2 members for now
+            Object[] row = new Object[100];
             //row[0]=e.getName();
             row[0]=e;//1st column stores object names so..they get deleted
             row[1]=e.getSpecial();
+            System.out.print(e.getSpecial());
             
             
             model.addRow(row);

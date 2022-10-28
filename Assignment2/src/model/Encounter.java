@@ -10,16 +10,26 @@ package model;
  */
 public class Encounter extends VitalSigns{
     
-   //put vital signs class attributes
-    private int encounterNumber;
+    private String encounterOrder;
 
-    public int getEncounterNumber() {
-        return encounterNumber;
+    public String getEncounterOrder() {
+        return encounterOrder;
     }
 
-    public void setEncounterNumber(int encounterNumber) {
-        this.encounterNumber = encounterNumber;
+    public void setEncounterOrder(String encounterOrder) {
+        this.encounterOrder = encounterOrder;
     }
+    
+
+   
+    
+   //need to put something else here?
+    
+    @Override
+        public String toString(){
+        return encounterOrder;
+      }
+    
     
     
 }

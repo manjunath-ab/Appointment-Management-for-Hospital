@@ -4,10 +4,25 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Admin
  */
 public class HospitalDirectory {
+    private ArrayList<Hospital> hospitalDirectory;
+
+    public ArrayList<Hospital> getHospitalDirectory() {
+        return hospitalDirectory;
+    }
+
+    public void setHospitalDirectory(ArrayList<Hospital> hospitalDirectory) {
+        this.hospitalDirectory = hospitalDirectory;
+    }
+
+    public HospitalDirectory(ArrayList<Hospital> hospitalDirectory) {
+        this.hospitalDirectory = hospitalDirectory;
+    }
     
 }

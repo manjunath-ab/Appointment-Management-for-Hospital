@@ -28,6 +28,7 @@ public class Doctor {
     public Doctor(String doctorName, String docID,String special) {
         this.doctorName = doctorName;
         this.docID = docID;
+        this.special=special;
         this.patientList=new ArrayList<>();
     }
 

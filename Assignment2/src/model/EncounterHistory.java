@@ -35,6 +35,8 @@ public class EncounterHistory {
         public void setEncounterHistory(ArrayList<Encounter> encounterHistory) {
             this.encounterHistory = encounterHistory;
         }
+        
+        
     
     
 }

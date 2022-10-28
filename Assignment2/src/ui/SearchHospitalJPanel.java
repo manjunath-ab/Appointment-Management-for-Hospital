@@ -40,7 +40,7 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
             row[0]=e;//1st column stores object names so..they get deleted
             System.out.print(e.getHospitalName());
             //test case
-            System.out.print(community.getHospitalDirectory().get(0).getHospitalName());
+            //System.out.print(community.getHospitalDirectory().get(0).getHospitalName());
             
             model.addRow(row);
             

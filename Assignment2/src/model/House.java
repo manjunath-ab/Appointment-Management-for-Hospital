@@ -12,5 +12,21 @@ public class House {
     
     private int houseNum;
     private String communityName;
+
+    public int getHouseNum() {
+        return houseNum;
+    }
+
+    public void setHouseNum(int houseNum) {
+        this.houseNum = houseNum;
+    }
+
+    public String getCommunityName() {
+        return communityName;
+    }
+
+    public void setCommunityName(String communityName) {
+        this.communityName = communityName;
+    }
     
 }
