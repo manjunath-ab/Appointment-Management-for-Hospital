@@ -193,6 +193,14 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
         //add new hospital objects
+        //validation start
+        if(txtAddHospital.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill the field to add a new hospital");
+                    return;    
+        
+        }
+        
+        //validation end
         Hospital newHospital=new Hospital();
         newHospital.setHospitalName(txtAddHospital.getText());
         c.getHospitalDirectory().add(newHospital);
@@ -203,7 +211,14 @@ public class CommunityAdminJPanel extends javax.swing.JPanel {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex = jTable1.getSelectedRow();
+        // validation start
+        if(txtUpdateName.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill the required field");
+                    return;    
         
+        }
+        
+        //validation end
         if (selectedRowIndex<0){
             JOptionPane.showMessageDialog(this,"Please select a record to update");
             return;

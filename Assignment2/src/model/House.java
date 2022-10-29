@@ -10,16 +10,18 @@ package model;
  */
 public class House {
     
-    private int houseNum;
+    private int houseNumber;
     private String communityName;
 
-    public int getHouseNum() {
-        return houseNum;
+    public int getHouseNumber() {
+        return houseNumber;
     }
 
-    public void setHouseNum(int houseNum) {
-        this.houseNum = houseNum;
+    public void setHouseNumber(int houseNumber) {
+        this.houseNumber = houseNumber;
     }
+
+    
 
     public String getCommunityName() {
         return communityName;

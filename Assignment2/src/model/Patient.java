@@ -11,24 +11,7 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class Patient extends Person{
-    private String communityName;
-    int houseNumber;
-
-    public String getCommunityName() {
-        return communityName;
-    }
-
-    public void setCommunityName(String communityName) {
-        this.communityName = communityName;
-    }
-
-    public int getHouseNumber() {
-        return houseNumber;
-    }
-
-    public void setHouseNumber(int houseNumber) {
-        this.houseNumber = houseNumber;
-    }
+    
     
     private ArrayList<Encounter> encounterHistory;
 

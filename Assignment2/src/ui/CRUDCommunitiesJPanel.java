@@ -182,6 +182,11 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
+        if(txtAddComm.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill the field to add a new community");
+                    return;    
+        
+        }
         Community newCommunity=new Community();
         newCommunity.setCommunityName(txtAddComm.getText());
         commList.getCommList().add(newCommunity);
@@ -207,6 +212,11 @@ public class CRUDCommunitiesJPanel extends javax.swing.JPanel {
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
+        if(txtUpdateComm.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill the required field");
+                    return;    
+        
+        }
         int selectedRowIndex = jTable1.getSelectedRow();
         
         if (selectedRowIndex<0){

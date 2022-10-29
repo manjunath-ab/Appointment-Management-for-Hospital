@@ -124,7 +124,7 @@ public class SelectPatientJPanel extends javax.swing.JPanel {
         int selectedRowIndex = jTable1.getSelectedRow();
         
         if (selectedRowIndex<0){
-            JOptionPane.showMessageDialog(this,"Please select a Hospital");
+            JOptionPane.showMessageDialog(this,"Please select a patient");
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();

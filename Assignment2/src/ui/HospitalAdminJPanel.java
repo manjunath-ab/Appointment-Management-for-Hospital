@@ -64,7 +64,6 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         btnAdd = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtPass = new javax.swing.JPasswordField();
         txtUid = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
@@ -72,6 +71,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         cb1 = new javax.swing.JComboBox<>();
         btnSelect = new javax.swing.JButton();
         btnLog = new javax.swing.JButton();
+        txtPass = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(102, 0, 102));
 
@@ -113,12 +113,6 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
-
-        txtPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPassActionPerformed(evt);
-            }
-        });
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("User ID");
@@ -212,8 +206,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpdate))
+                    .addComponent(btnUpdate)
+                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -226,6 +220,16 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         //update dd
+        //uid remains fixed :
+        //update validation
+        if(txtUserName.getText().isEmpty()||new String(txtPass.getPassword()).isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill username and password field ");
+                    return;    
+        
+        }
+        if(txtUid.getText().isEmpty()){
+            
+        
         int selectedRowIndex = jTable1.getSelectedRow();
         
         if (selectedRowIndex<0){
@@ -240,6 +244,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
             
             if(d.getDocID().equals(selectedDoctor.getDocID())){
                 d.setDoctorName(txtUserName.getText());
+                d.setSpecial(cb1.getItemAt(cb1.getSelectedIndex()));
                 
             }
         }
@@ -262,16 +267,42 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         }
         
         selectedDoctor.setDoctorName(txtUserName.getText());
+        selectedDoctor.setSpecial(cb1.getItemAt(cb1.getSelectedIndex()));
         //update table
         populateTable();
         
         
         
-        
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"UID cannot be changed");
+            return;
+        }
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
+        //validation start
+        if(txtUid.getText().isEmpty()||txtUserName.getText().isEmpty()||cb1.getItemAt(cb1.getSelectedIndex()).isEmpty()||new String(txtPass.getPassword()).isEmpty()){
+                    JOptionPane.showMessageDialog(this,"Fill all the fields");
+                    return;    
+        
+        }
+        //validation end
+        //uid validation start
+        for(UserLogin u : userLoginList.getUserLoginList()){
+            try{
+                if(u.getUid().equals(txtUid.getText())){
+                JOptionPane.showMessageDialog(this,"User ID already exists");
+                    return;
+            }
+            }catch (Exception e){
+                
+            }
+           
+        }
+        
+        //uid validation end
         
         //add to dd
         doctorDirectory.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
@@ -282,9 +313,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         newDoctor.setUid(txtUid.getText());
         newDoctor.setUserType("Doctor");
         userLoginList.getUserLoginList().add(newDoctor);
-        txtUserName.getText();
-        txtPass.getPassword();
-        txtUid.getText();
+        
         //add to table
         h.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
         populateTable();
@@ -317,7 +346,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         int selectedRowIndex = jTable1.getSelectedRow();
         
         if (selectedRowIndex<0){
-            JOptionPane.showMessageDialog(this,"Please select a record to delete");
+            JOptionPane.showMessageDialog(this,"Please select a record");
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
@@ -340,10 +369,6 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
 
         MainJFrame.splitPane.setRightComponent(MainJFrame.workPanel);
     }//GEN-LAST:event_btnLogActionPerformed
-
-    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPassActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

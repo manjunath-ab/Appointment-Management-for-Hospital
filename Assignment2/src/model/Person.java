@@ -8,7 +8,7 @@ package model;
  *
  * @author Admin
  */
-public class Person {
+public class Person extends House {
     //set id for sys,community admin
     //maybe password too .
     public String Name;

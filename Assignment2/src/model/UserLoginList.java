@@ -11,22 +11,21 @@ import java.util.ArrayList;
  * @author Admin
  */
 public class UserLoginList {
-    private static  ArrayList<UserLogin>  userLoginList;
-
-    public UserLoginList() {
-        UserLoginList.userLoginList = new ArrayList<>();
-    }
-
-    
-    
+    private ArrayList<UserLogin>  userLoginList;
 
     public ArrayList<UserLogin> getUserLoginList() {
         return userLoginList;
     }
 
     public void setUserLoginList(ArrayList<UserLogin> userLoginList) {
-        UserLoginList.userLoginList = userLoginList;
+        this.userLoginList = userLoginList;
     }
+
+    public UserLoginList() {
+        this.userLoginList =new ArrayList<>();
+    }
+    
+    
     public UserLogin addUser(){
     
     UserLogin newUser = new UserLogin();

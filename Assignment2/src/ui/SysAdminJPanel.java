@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import model.Patient;
 import static ui.MainJFrame.patientDirectory;
 import model.Doctor;
@@ -188,6 +189,26 @@ public class SysAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         UserLogin newUser = userLoginList.addUser();
         //put in uid too
+        //check if its unique
+        for(UserLogin u : userLoginList.getUserLoginList()){
+            try{
+                if(u.getUid().equals(txtUid.getText())){
+                JOptionPane.showMessageDialog(this,"User ID already exists");
+                    return;
+            }
+            }catch (Exception e){
+                
+            }
+           
+        }
+        //validation case
+        if(txtUid.getText().isEmpty()||addUserNamejTextField.getText().isEmpty()||new String(addjPasswordField.getPassword()).isEmpty()){
+            
+            
+            JOptionPane.showMessageDialog(this,"Fill in all the fields");
+            return;
+            
+        }
         newUser.setUid(txtUid.getText());
         newUser.setUserName(addUserNamejTextField.getText());
         newUser.setPass(new String(addjPasswordField.getPassword()));
@@ -197,6 +218,9 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             patientDirectory.getPatientDirectory().add(new Patient(newUser.getUserName(),newUser.getUid(),1,"",1,""));
             
         }
+        
+        JOptionPane.showMessageDialog(this,"Credentials Created");
+        return;
        
     }//GEN-LAST:event_jButton1ActionPerformed
 

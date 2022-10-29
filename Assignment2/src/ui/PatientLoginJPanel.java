@@ -123,10 +123,19 @@ public class PatientLoginJPanel extends javax.swing.JPanel {
 
             if(txtUserName.getText().equals(e.getUserName())&&txtPass.getText().equals(e.getPass())){
                 if(e.getUserType().equals("Patient")){
-                    PatientJPanel  patientPanel= new PatientJPanel(e);
+                    for(Patient p:patientDirectory.getPatientDirectory()){
+                        if(p.getPatientID().equals(e.getUid())){
+                            PatientOptionsJPanel paPanel=new PatientOptionsJPanel(p,e);
+                            splitPane.setRightComponent(paPanel);
+                            return;
+                        }
+                    }
+                        
+                    
+                    
+                    //PatientJPanel  patientPanel= new PatientJPanel(e);
                     //SearchJPanel searchPanel = new SearchJPanel(commList);
-                    splitPane.setRightComponent(patientPanel);
-                    return;
+                    
 
                 }
                 

@@ -14,6 +14,10 @@ public class UserLogin {
     String userName;
     String pass;
 
+   
+    
+    
+
     public void setUserType(String userType) {
         this.userType = userType;
     }
