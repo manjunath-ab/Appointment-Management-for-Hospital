@@ -244,7 +244,35 @@ public class PatientJPanel extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         //in my method we add it to patient details and then we modify that patient in patient directory.
+        //extra validation
+        try{ 
+            if(gender.isEmpty()){
+                
+            }
+          
+           
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this,"Please select a gender");
+            return;
+        }
+        if(!txtName.getText().matches("[a-zA-Z]+")){
+            JOptionPane.showMessageDialog(this,"Please fill name correctly");
+            return;
+        }
+        try{
+                if(txtCell.getText().length()!=10 ){
+                    JOptionPane.showMessageDialog(this,"Check phone number");
+                    return;    
+                }
+                
+                
+            
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(this,"Please provide valid input for phone number");
+                return;
+            }
         
+        //validation end
         //validation start
         
         if(txtName.getText().isEmpty()||txtAge.getText().isEmpty()||txtCell.getText().isEmpty()||txtCommunity.getText().isEmpty()||txtEmail.getText().isEmpty()||cb1.getItemAt(cb1.getSelectedIndex()).isEmpty()||gender.isEmpty()){
