@@ -324,14 +324,14 @@ public class MainJFrame extends javax.swing.JFrame {
         userLoginList.getUserLoginList().add(newUser5);
         userLoginList.getUserLoginList().add(newUser6);
         userLoginList.getUserLoginList().add(newUser7);
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc1","D1","Cardiology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc2","D2","Neurology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc3","D3","Cardiology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc4","D4","Urology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc5","D5","Dermatology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc6","D6","Neurology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc7","D7","Urology"));
-        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc8","D8","Dermatology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc1","D1",1,"",1234567890,"fdsa","Cardiology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc2","D2",1,"",1234567890,"","Neurology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc3","D3",1,"",1234567890,"","Cardiology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc4","D4",1,"",1234567890,"","Urology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc5","D5",1,"",1234567890,"","Dermatology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc6","D6",2,"",1234567890,"","Neurology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc7","D7",1,"",1234567890,"","Urology"));
+        doctorDirectory.getDoctorDirectory().add(new Doctor("Doc8","D8",1,"",1234567890,"","Dermatology"));
         
         
     }

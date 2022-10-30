@@ -14,6 +14,16 @@ public class Patient extends Person{
     
     
     private ArrayList<Encounter> encounterHistory;
+    
+    private int count=1;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public ArrayList<Encounter> getEncounterHistory() {
         return encounterHistory;

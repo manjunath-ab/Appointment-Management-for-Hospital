@@ -163,9 +163,9 @@ public class SelectDoctorJPanel extends javax.swing.JPanel {
         //bug fix
         for(Patient p: patientDirectory.getPatientDirectory()){
             
-            if(p.getPatientID().equals(txtPatientID.getText())){
+            if(p.getPersonID().equals(txtPatientID.getText())){
                 for (Doctor e : doctorDirectory.getDoctorDirectory()){
-                    if(e.getDocID().equals(selectedDoctor.getDocID())){
+                    if(e.getPersonID().equals(selectedDoctor.getPersonID())){
                         e.getPatientList().add(p);
                     }
                     

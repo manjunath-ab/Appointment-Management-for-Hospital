@@ -122,9 +122,9 @@ public class DoctorLoginJPanel extends javax.swing.JPanel {
                 if(e.getUserType().equals("Doctor")){
                     for(Doctor d:doctorDirectory.getDoctorDirectory()){
 
-                        if(d.getDocID().equals(e.getUid())){
+                        if(d.getPersonID().equals(e.getUid())){
 
-                            System.out.print(d.getDocID());
+                            System.out.print(d.getPersonID());
                             SelectPatientJPanel patientPanel= new SelectPatientJPanel(d);//need to access that particular doctor list here
                             splitPane.setRightComponent(patientPanel);
                             return;

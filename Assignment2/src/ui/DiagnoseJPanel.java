@@ -20,7 +20,7 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
      * Creates new form DiagnoseJPanel
      */
     Patient p;
-    int i=1;
+    
     public DiagnoseJPanel(Patient p) {
         initComponents();
         this.p=p;
@@ -283,10 +283,10 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
         e.setBpm(Integer.parseInt(txtBp.getText()));
         e.setComment(txtComment.getText());
         //encounter order
-        e.setEncounterOrder("Encounter "+String.valueOf(i));
+        e.setEncounterOrder("Encounter "+String.valueOf(p.getCount()));
         p.getEncounterHistory().add(e);
         populateTable();
-        i++;
+        p.setCount(p.getCount()+1);
     }//GEN-LAST:event_btnRecEncActionPerformed
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed

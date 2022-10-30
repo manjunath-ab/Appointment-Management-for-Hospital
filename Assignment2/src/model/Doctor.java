@@ -8,11 +8,11 @@ import java.util.ArrayList;
  *
  * @author Admin
  */
-public class Doctor {
+public class Doctor extends Person{
     
     
-    private String doctorName;
-    private String docID;
+    
+    
     private String special;
 
     public void setSpecial(String special) {
@@ -25,22 +25,14 @@ public class Doctor {
     private ArrayList<Patient> patientList;
     //define an array of patient_id or names;
 
-    public Doctor(String doctorName, String docID,String special) {
-        this.doctorName = doctorName;
-        this.docID = docID;
+    public Doctor(String doctorName, String docID,int age, String gender,long Cell_phone_number,String emailAddress,String special) {
+        super(doctorName,docID,age,gender,Cell_phone_number,emailAddress);
         this.special=special;
         this.patientList=new ArrayList<>();
     }
 
     
-    public void setDocID(String docID) {
-        this.docID = docID;
-    }
-
-    public String getDocID() {
-        return docID;
-    }
-    
+   
     
 
     
@@ -56,17 +48,11 @@ public class Doctor {
     
 
     
-    public String getDoctorName() {
-        return doctorName;
-    }
-
-    public void setDoctorName(String doctorName) {
-        this.doctorName = doctorName;
-    }
+    
     
     @Override
     public String toString(){
-        return doctorName;
+        return Name;
     }
     
     

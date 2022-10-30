@@ -12,15 +12,15 @@ public class Person extends House {
     //set id for sys,community admin
     //maybe password too .
     public String Name;
-    public String patientID; // patient ID is set to string as it can contain characters and numbers 
+    public String personID; // patient ID is set to string as it can contain characters and numbers 
     public int  age ;
     public String gender;  
     public String contactInfo ;
     public long  Cell_phone_number ;
     public String emailAddress; 
-    public Person(String Name,String patientID,int age,String gender,long Cell_phone_number,String emailAddress) {
+    public Person(String Name,String personID,int age,String gender,long Cell_phone_number,String emailAddress) {
         this.Name = Name;
-        this.patientID = patientID;
+        this.personID = personID;
         this.age = age;
         this.gender = gender;
         this.Cell_phone_number = Cell_phone_number;
@@ -31,9 +31,16 @@ public class Person extends House {
         this.Name = Name;
     }
 
-    public void setPatientID(String patientID) {
-        this.patientID = patientID;
+    public String getPersonID() {
+        return personID;
     }
+
+    public void setPersonID(String personID) {
+        this.personID = personID;
+    }
+    
+
+   
 
     public void setAge(int age) {
         this.age = age;
@@ -59,9 +66,7 @@ public class Person extends House {
         return Name;
     }
 
-    public String getPatientID() {
-        return patientID;
-    }
+
 
     public int getAge() {
         return age;

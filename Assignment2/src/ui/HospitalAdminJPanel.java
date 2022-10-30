@@ -242,8 +242,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         //update dd
         for(Doctor d: doctorDirectory.getDoctorDirectory()){
             
-            if(d.getDocID().equals(selectedDoctor.getDocID())){
-                d.setDoctorName(txtUserName.getText());
+            if(d.getPersonID().equals(selectedDoctor.getPersonID())){
+                d.setName(txtUserName.getText());
                 d.setSpecial(cb1.getItemAt(cb1.getSelectedIndex()));
                 
             }
@@ -257,7 +257,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         }*/
         //nothing was added so nothing is being changed here.
         for(UserLogin u: userLoginList.getUserLoginList()){
-            if(u.getUid().equals(selectedDoctor.getDocID())){
+            if(u.getUid().equals(selectedDoctor.getPersonID())){
                 u.setUserName(txtUserName.getText());
                 u.setPass(new String(txtPass.getPassword()));
                 
@@ -266,7 +266,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
             
         }
         
-        selectedDoctor.setDoctorName(txtUserName.getText());
+        selectedDoctor.setName(txtUserName.getText());
         selectedDoctor.setSpecial(cb1.getItemAt(cb1.getSelectedIndex()));
         //update table
         populateTable();
@@ -305,7 +305,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         //uid validation end
         
         //add to dd
-        doctorDirectory.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
+        doctorDirectory.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),1,"",1234567890,"",cb1.getItemAt(cb1.getSelectedIndex())));
         //add cred to user login list
         UserLogin newDoctor=new UserLogin();
         newDoctor.setUserName(txtUserName.getText());
@@ -315,7 +315,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         userLoginList.getUserLoginList().add(newDoctor);
         
         //add to table
-        h.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),cb1.getItemAt(cb1.getSelectedIndex())));
+        h.getDoctorDirectory().add(new Doctor(txtUserName.getText(),txtUid.getText(),1,"",1234567890,"",cb1.getItemAt(cb1.getSelectedIndex())));
         populateTable();
         
     }//GEN-LAST:event_btnAddActionPerformed
@@ -353,7 +353,7 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         //getting the whole object to manipulate
         Doctor selectedDoctor= (Doctor) model.getValueAt(selectedRowIndex,0);
         for(Doctor d: doctorDirectory.getDoctorDirectory()){
-            if(d.getDocID().equals(selectedDoctor.getDocID())){
+            if(d.getPersonID().equals(selectedDoctor.getPersonID())){
                 SelectPatientJPanel patientPanel= new SelectPatientJPanel(d);//need to access that particular doctor list here
                 splitPane.setRightComponent(patientPanel);
                 break;

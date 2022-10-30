@@ -283,7 +283,7 @@ public class PatientJPanel extends javax.swing.JPanel {
         
         //validation end
         for(Patient p:patientDirectory.getPatientDirectory()){
-            if(p.getPatientID().equals(u.getUid())){
+            if(p.getPersonID().equals(u.getUid())){
                 p.setCommunityName(txtCommunity.getText());
                 p.setHouseNumber(Integer.parseInt(cb1.getItemAt(cb1.getSelectedIndex()).trim()));
                 p.setAge(Integer.parseInt(txtAge.getText()));
