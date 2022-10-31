@@ -277,10 +277,24 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
         }
         
         //validation end
+        //extra validation
+        
+        
+        //validation end
         
         Encounter e=new Encounter();
-        e.setTemp(Float.parseFloat(txtTemp.getText()));
-        e.setBpm(Integer.parseInt(txtBp.getText()));
+        try{
+            e.setTemp(Float.parseFloat(txtTemp.getText()));
+        }catch (Exception h){
+            JOptionPane.showMessageDialog(this,"check temperature field");
+                    return;
+        }
+        try{
+            e.setBpm(Integer.parseInt(txtBp.getText()));
+        }catch (Exception h){
+            JOptionPane.showMessageDialog(this,"check heart rate field");
+                    return;
+        }
         e.setComment(txtComment.getText());
         //encounter order
         e.setEncounterOrder("Encounter "+String.valueOf(p.getCount()));
