@@ -79,6 +79,8 @@ public class PatientOptionsJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnView.setBackground(new java.awt.Color(0, 0, 0));
+        btnView.setForeground(new java.awt.Color(255, 255, 255));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +103,8 @@ public class PatientOptionsJPanel extends javax.swing.JPanel {
 
         txtComment.setEditable(false);
 
+        btnBook.setBackground(new java.awt.Color(0, 0, 0));
+        btnBook.setForeground(new java.awt.Color(255, 255, 255));
         btnBook.setText("Book Appointment");
         btnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,10 +137,12 @@ public class PatientOptionsJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(btnBook)))
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtBp, txtComment, txtTemp});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnBook, btnView});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

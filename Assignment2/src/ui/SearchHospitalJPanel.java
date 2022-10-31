@@ -76,6 +76,8 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnSelect.setBackground(new java.awt.Color(0, 0, 0));
+        btnSelect.setForeground(new java.awt.Color(255, 255, 255));
         btnSelect.setText("Select");
         btnSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +85,8 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setBackground(new java.awt.Color(0, 0, 0));
+        btnLog.setForeground(new java.awt.Color(255, 255, 255));
         btnLog.setText("Logout");
         btnLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,6 +111,9 @@ public class SearchHospitalJPanel extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnLog, btnSelect});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()

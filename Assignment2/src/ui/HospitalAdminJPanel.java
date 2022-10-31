@@ -88,6 +88,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        btnDelete.setBackground(new java.awt.Color(0, 0, 0));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +103,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAdd.setBackground(new java.awt.Color(0, 0, 0));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +121,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("User ID");
 
+        btnUpdate.setBackground(new java.awt.Color(0, 0, 0));
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +135,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
 
         cb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Dermatalogy", "Neurology", "Urology" }));
 
+        btnSelect.setBackground(new java.awt.Color(0, 0, 0));
+        btnSelect.setForeground(new java.awt.Color(255, 255, 255));
         btnSelect.setText("Select Further");
         btnSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +144,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setBackground(new java.awt.Color(0, 0, 0));
+        btnLog.setForeground(new java.awt.Color(255, 255, 255));
         btnLog.setText("Logout");
         btnLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +193,8 @@ public class HospitalAdminJPanel extends javax.swing.JPanel {
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtPass, txtUid, txtUserName});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAdd, btnDelete, btnLog, btnSelect, btnUpdate});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

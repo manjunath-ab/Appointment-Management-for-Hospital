@@ -73,6 +73,8 @@ public class SysAdminJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Save User Credentials");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +84,8 @@ public class SysAdminJPanel extends javax.swing.JPanel {
 
         cbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Community Admin", "Hospital Admin" }));
 
+        btnCrud.setBackground(new java.awt.Color(0, 0, 0));
+        btnCrud.setForeground(new java.awt.Color(255, 255, 255));
         btnCrud.setText("Access");
         btnCrud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +157,8 @@ public class SysAdminJPanel extends javax.swing.JPanel {
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addUserNamejTextField, addjPasswordField, txtUid});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCrud, jButton1});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

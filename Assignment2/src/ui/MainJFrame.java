@@ -60,6 +60,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
         controlPanel.setBackground(new java.awt.Color(255, 102, 102));
 
+        btnPatient.setBackground(new java.awt.Color(0, 0, 0));
+        btnPatient.setForeground(new java.awt.Color(255, 255, 255));
         btnPatient.setText("Patient Login");
         btnPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +69,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnDoctor.setBackground(new java.awt.Color(0, 0, 0));
+        btnDoctor.setForeground(new java.awt.Color(255, 255, 255));
         btnDoctor.setText("Doctor Login");
         btnDoctor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +78,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCommAdmin.setBackground(new java.awt.Color(0, 0, 0));
+        btnCommAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnCommAdmin.setText("Comm Admin Login");
         btnCommAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +87,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnSysAdmin.setBackground(new java.awt.Color(0, 0, 0));
+        btnSysAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnSysAdmin.setText("Sys Admin Login");
         btnSysAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +96,8 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnHosAdmin.setBackground(new java.awt.Color(0, 0, 0));
+        btnHosAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnHosAdmin.setText("Hospital Admin Login");
         btnHosAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,23 +159,22 @@ public class MainJFrame extends javax.swing.JFrame {
         workPanelLayout.setHorizontalGroup(
             workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanelLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
                 .addGroup(workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(workPanelLayout.createSequentialGroup()
-                        .addGap(274, 274, 274)
-                        .addComponent(jLabel3))
-                    .addGroup(workPanelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4))))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
                 .addContainerGap(195, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, workPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(315, 315, 315))
         );
         workPanelLayout.setVerticalGroup(
             workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(workPanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addContainerGap()
                 .addComponent(jLabel3)
-                .addGap(68, 68, 68)
+                .addGap(79, 79, 79)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -87,6 +87,8 @@ public class PatientJPanel extends javax.swing.JPanel {
 
         cb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", " " }));
 
+        btnSave.setBackground(new java.awt.Color(0, 0, 0));
+        btnSave.setForeground(new java.awt.Color(255, 255, 255));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +96,8 @@ public class PatientJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnLog.setBackground(new java.awt.Color(0, 0, 0));
+        btnLog.setForeground(new java.awt.Color(255, 255, 255));
         btnLog.setText("Logout");
         btnLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +203,8 @@ public class PatientJPanel extends javax.swing.JPanel {
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtCell, txtCommunity, txtEmail, txtName});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnLog, btnSave});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

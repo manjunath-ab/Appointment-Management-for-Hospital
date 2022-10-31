@@ -6,7 +6,6 @@ package ui;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.Community;
 import model.Encounter;
 import model.Patient;
 
@@ -80,6 +79,8 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(102, 0, 102));
 
+        btnRecEnc.setBackground(new java.awt.Color(0, 0, 0));
+        btnRecEnc.setForeground(new java.awt.Color(255, 255, 255));
         btnRecEnc.setText("Register New Record");
         btnRecEnc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +105,8 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Vital Signs");
 
+        btnView.setBackground(new java.awt.Color(0, 0, 0));
+        btnView.setForeground(new java.awt.Color(255, 255, 255));
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +114,8 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnClear.setBackground(new java.awt.Color(0, 0, 0));
+        btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,6 +165,8 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("BPM");
 
+        btnLog.setBackground(new java.awt.Color(0, 0, 0));
+        btnLog.setForeground(new java.awt.Color(255, 255, 255));
         btnLog.setText("Logout");
         btnLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,12 +223,14 @@ public class DiagnoseJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(69, 69, 69)
                                 .addComponent(btnRecEnc)))))
-                .addGap(0, 60, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtBp, txtComment, txtName, txtTemp});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtGender});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnClear, btnLog, btnRecEnc, btnView});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
