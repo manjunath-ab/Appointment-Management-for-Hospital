@@ -21,7 +21,7 @@ public class Community {
         return communityName;
     }
     public Community(){
-        this.hospitalDirectory = new ArrayList<Hospital>();
+        this.hospitalDirectory = new ArrayList<>();
         
     }
 
