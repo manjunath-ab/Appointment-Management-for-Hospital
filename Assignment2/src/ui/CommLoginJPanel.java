@@ -63,7 +63,7 @@ public class CommLoginJPanel extends javax.swing.JPanel {
         });
 
         lblUserName.setForeground(new java.awt.Color(255, 255, 255));
-        lblUserName.setText("UserName");
+        lblUserName.setText("User Name");
 
         lblPass.setForeground(new java.awt.Color(255, 255, 255));
         lblPass.setText("Password");
