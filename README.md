@@ -14,4 +14,13 @@ Sequence Diagram:
 
 
 
+This is the flow of the application.
+The System Admin creates the credentials for Patient,Doctor,Hospital admins and community admins.The patient can login to book an appointment with their preferred doctors and view their medical history.
 
+The Doctor logs in and selects which patients to diagnose accordingly.He/she makes changes to vital signs and leaves an encounter record.
+
+The Hospital Admmin can access all the data under his/her hospital.
+
+The Community Admin can access all the data under his/her community.
+
+The System Admin can access all the necessary data in the application.
